@@ -17,9 +17,15 @@ function App() {
         <div>
             <h1>{advice}</h1>
             <button onClick={getAdvice}>Get advice</button>
-            <p>You have read <strong>{count}</strong> piece{count > 1 ? '' : 's'} of advice</p>
+            <Message count={count}/>
         </div>
     );
+}
+
+function Message(props) {
+    return (
+        <p>You have read <strong>{props.count}</strong> piece{props.count > 1 ? '' : 's'} of advice</p>
+    )
 }
 
 export default App;
